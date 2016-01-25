@@ -15,7 +15,7 @@ function add_up($team){
   echo $json['total_points']."<br />";
   $team['score'] += $json['total_points'] ."pts<br />";
   } //end for
-  echo . "</p><p><b>" . $team['score'] . " points</b></p>";
+  echo "</p><p><b>" . $team['score'] . " points</b></p>";
 } //end function
 
 
