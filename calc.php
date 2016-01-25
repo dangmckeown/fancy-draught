@@ -1,9 +1,7 @@
 <?php
-
 //=========
 //== RECREATE INDEX FILE, TRY TO AUTOSORT TEAMS
 //=========
-
 function add_up($team){
   echo "<h3>". $team['name'] ."</h3>";
   echo "<p>";
@@ -22,8 +20,7 @@ function add_up($team){
   } //end for
   echo "</p><p><b>" . $team['score'] . " points</b></p>";
 } //end function
-
-auto_sort($team){
+function auto_sort($team){
   $gk = array();
   $df = array();
   $md = array();
@@ -48,16 +45,16 @@ auto_sort($team){
         $fw[] = $json;
   
 } //end switch
+}//end for
   //test
   echo $gk[1]['second_name'];
-    echo $gk[1]['total_score']
-    echo "<br />"
+    echo $gk[1]['total_score'];
+    echo "<br />";
   echo $fw[1]['second_name'];
-    echo $fw[1]['total_score']
+    echo $fw[1]['total_score'];
   
   
 } //end autosort
-
 
 $dan = array(
 "name"=>"Johnny-come-lately Ziggy Stardust/Hans Gruber Memorial XV",
@@ -78,7 +75,6 @@ $dan = array(
 15	=>	250,	
 "score" => 0
 );
-
 $holly = array(
 "name"=>"The Bengal Penguins",
 1	=>	465	,
@@ -98,7 +94,6 @@ $holly = array(
 15	=>	376,
 "score" => 0
 );
-
 $pete = array(
 "name"=>"Dr. Aftlove or: How I Learned to Stop Worrying and Love Saido Berahino as a Second Round Pick sponsored by Torque, it’s what moves boulders, Memorial XV",
 1	=>	205	,
@@ -139,6 +134,7 @@ $christ = array(
 "score" => 0
 );
 
+
 $sam = array(
 "name"=>"Repay Me Depay Kauto Star Roddy Piper Memorial XV",
 1	=>	353	,
@@ -160,15 +156,10 @@ $sam = array(
 );
 
 add_up($dan);
-
 add_up($holly);
-
 add_up($pete);
-
 add_up($christ);
-
 add_up($sam);
-
 auto_sort($dan);
 
 ?>
