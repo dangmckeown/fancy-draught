@@ -1,5 +1,7 @@
 <?php
 
+echo "Working!";
+
 $dan = array(
 0=>"My team",
 1	=>	3,
@@ -24,6 +26,6 @@ $url = "http://fantasy.premierleague.com/web/api/elements/" . $dan[2] . "/";
 $content = file_get_contents($url);
 $json = json_decode($content, true);
 
-echo $json[1]['total_score'];
+echo $json['total_score'];
 
 ?>
