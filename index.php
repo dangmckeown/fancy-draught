@@ -1,7 +1,7 @@
 <?php
 
 function add_up($team){
-  echo "<h3>". $team[0] ."</h3>"
+  echo "<h3>". $team[0] ."</h3>";
   echo "<p>";
   for($i = 1; $i<=15; $i++)
   {
