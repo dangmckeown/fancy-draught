@@ -124,4 +124,10 @@ add_up($dan);
 
 add_up($holly);
 
+add_up($pete);
+
+add_up($christ);
+
+add_up($sam);
+
 ?>
