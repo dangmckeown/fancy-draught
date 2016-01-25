@@ -13,8 +13,8 @@ function add_up($team){
   echo " (" . $json['type_name'] . ", " . $json['team_name'] . ") ";
   //Total score
   echo $json['total_points']."<br />";
-  $team['score'] += $json['total_points'];
-  }
+  $team['score'] += $json['total_points'] ."pts<br />";
+  } //end for
   echo . "</p><p><b>" . $team['score'] . " points</b></p>";
 } //end function
 
@@ -36,33 +36,9 @@ $dan = array(
 13	=>	371,
 14	=>	171,
 15	=>	250,	
-"Score" => 0
+"score" => 0
 );
 
 add_up($dan);
 
-/*
-
-$url = "http://fantasy.premierleague.com/web/api/elements/" . $dan[2] . "/";
-$content = file_get_contents($url);
-$json = json_decode($content, true);
-
-
-=== TESTING
-echo "Content: " .$content;
-
-echo "URL: " . $url;
-
-echo "json: " . $json;
-echo "<p />";
-
-//Player
-echo $json['first_name'] . " " . $json['second_name'];
-
-//Details
-echo " (" . $json['type_name'] . ", " . $json['team_name'] . ") ";
-
-//Total score
-echo $json['total_points']
-*/
 ?>
