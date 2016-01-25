@@ -1,6 +1,5 @@
 <?php
 
-echo "Working!";
 
 $dan = array(
 0=>"My team",
@@ -18,8 +17,8 @@ $dan = array(
 12	=>	112,
 13	=>	371,
 14	=>	171,
-15	=>	250	
-
+15	=>	250,	
+"Score" => 0
 );
 
 $url = "http://fantasy.premierleague.com/web/api/elements/" . $dan[2] . "/";
@@ -36,6 +35,13 @@ echo "json: " . $json;
 echo "<p />";
 */
 
-echo $json['id'];
+//Player
+echo $json['first_name'] . " " . $json['second_name'];
+
+//Details
+echo " (" . $json['type_name'] . ", " . $json['team_name'] . ") ";
+
+//Total score
+echo $json['total_points']
 
 ?>
