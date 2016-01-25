@@ -34,6 +34,6 @@ echo "URL: " . $url;
 echo "json: " . $json;
 echo "<p />";
 
-echo $json['total_score'];
+echo $json['id'];
 
 ?>
