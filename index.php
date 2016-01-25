@@ -26,13 +26,15 @@ $url = "http://fantasy.premierleague.com/web/api/elements/" . $dan[2] . "/";
 $content = file_get_contents($url);
 $json = json_decode($content, true);
 
-
+/*
+=== TESTING
 echo "Content: " .$content;
 
 echo "URL: " . $url;
 
 echo "json: " . $json;
 echo "<p />";
+*/
 
 echo $json['id'];
 
