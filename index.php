@@ -100,7 +100,7 @@ $christ = array(
 "score" => 0
 );
 
-$christ = array(
+$sam = array(
 0=>"Repay Me Depay Kauto Star Roddy Piper Memorial XV",
 1	=>	353	,
 2	=>	79	,
