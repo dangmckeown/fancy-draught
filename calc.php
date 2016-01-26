@@ -90,11 +90,29 @@ foreach ($outfield as $out){
   $pitch[] = $out;
 }
 
+//set table layout
+echo "<table><tr><td valign=top>";
 //here we go - try to output pitch team
+$team_total = 0;
 foreach ($pitch as $pit){
-echo "<p>" . $pit['second_name']. ", " .$pit['type_name'] . "</p>";
+  $team_total += $pit['total_points'];
+echo "<p>" . $pit['second_name']. ", " .$pit['type_name'] . " " . $pit['total_points'] . "points</p>";
 }
-  
+
+echo "<p>On pitch: $team_total points</p>";
+echo "</td><td valign=top>";
+
+//here we go - try to output bench team
+$bench_total = 0;
+foreach ($bench as $ben){
+  $bench_total += $ben['total_points'];
+echo "<p>" . $ben['second_name']. ", " .$ben['type_name'] . " " . $ben['total_points'] . "points</p>";
+}
+$squad_total = $team_total + $bench_total;
+echo "<p>On bench: $bench_total points</p>";
+
+  echo "<p>Combined first team &amp; subs: $squad_total points</p>";
+  echo "</td></tr></table>";
 } //end autosort
 
 $dan = array(
@@ -196,11 +214,11 @@ $sam = array(
 "score" => 0
 );
 
-add_up($dan);
-add_up($holly);
-add_up($pete);
-add_up($christ);
-add_up($sam);
+#add_up($dan);
+#add_up($holly);
+#add_up($pete);
+#add_up($christ);
+#add_up($sam);
 auto_sort($dan);
 
 ?>
