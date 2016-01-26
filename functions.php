@@ -1,6 +1,6 @@
 <?php
 echo "<!-- functions loaded! -->";
-
+/*
 function get_min($array){
   $min=array('second_name' => "Default value",'total_points' => 20000);
   foreach ($array as $arr){
@@ -34,14 +34,7 @@ function auto_sort($team){
       case "Goalkeeper":
         $gk[] = $json;
         break;
-      /*case "Defender":
-        $df[] = $json;
-        break;
-      case "Midfielder":
-        $md[] = $json;
-        break;
-      default:
-        $fw[] = $json;*/
+
   default:
         $outfield[] = $json;
 } //end switch
@@ -100,5 +93,7 @@ echo "<p>On bench: $bench_total points</p>";
   echo "<p>Combined first team &amp; subs: $squad_total points</p>";
   echo "</td></tr></table>";
 } //end autosort
+
+*/
 
 ?>
