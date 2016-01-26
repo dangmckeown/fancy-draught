@@ -50,7 +50,12 @@ function auto_sort($team){
 }//end for
 
 //bench lower scoring goalie
-  
+
+echo $gk[0]['first_name'];
+echo " ";
+echo $gk[1]['second_name'];
+
+/* COMMENT OUT FOR TESTING 
 if ($gk[0]['total_points'] > $gk[1]['total_points'] ){
 echo $gk[0]['second_name'];
  $bench[] = $gk[1];
@@ -62,6 +67,7 @@ else
 $bench[] = $gk[0];
  $pitch[] = $gk[1];
 }
+*/
 
 #foreach ($pitch as $pit){
 #  echo "<p>" . $pit['second_name']. ", " .$pit['type_name'] . "</p>";
