@@ -1,7 +1,7 @@
 <?php
 //includes
 include_once('header.php');
-include_once('functions.php');
+#include_once('functions.php');
 include_once('teams.php');
 
 //get those teams out there!
