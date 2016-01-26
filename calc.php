@@ -36,6 +36,8 @@ function add_up($team){
 } //end function
 
 function auto_sort($team){
+  
+  echo "<h3>". $team['name'] ."</h3>";
   $bench = array();
   $pitch = array();
   $gk = array();
@@ -91,7 +93,7 @@ foreach ($outfield as $out){
 }
 
 //set table layout
-echo "<table><tr><td valign=top>";
+echo "<table><tr><td>First team</td><td>Subs</td></tr><tr><td valign=top>";
 //here we go - try to output pitch team
 $team_total = 0;
 foreach ($pitch as $pit){
@@ -99,7 +101,7 @@ foreach ($pitch as $pit){
 echo "<p>" . $pit['second_name']. ", " .$pit['type_name'] . " " . $pit['total_points'] . "points</p>";
 }
 
-echo "<p>On pitch: $team_total points</p>";
+
 echo "</td><td valign=top>";
 
 //here we go - try to output bench team
@@ -108,6 +110,10 @@ foreach ($bench as $ben){
   $bench_total += $ben['total_points'];
 echo "<p>" . $ben['second_name']. ", " .$ben['type_name'] . " " . $ben['total_points'] . "points</p>";
 }
+
+
+  echo "</td></tr><tr><td>";
+echo "<p><b>On pitch: $team_total points</p></b></td><td>";
 $squad_total = $team_total + $bench_total;
 echo "<p>On bench: $bench_total points</p>";
 
