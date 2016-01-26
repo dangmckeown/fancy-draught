@@ -52,39 +52,48 @@ function auto_sort($team){
       case "Goalkeeper":
         $gk[] = $json;
         break;
-      case "Defender":
+      /*case "Defender":
         $df[] = $json;
         break;
       case "Midfielder":
         $md[] = $json;
         break;
       default:
-        $fw[] = $json;
-  
+        $fw[] = $json;*/
+  default:
+        $outfield[] = $json;
 } //end switch
 }//end for
 
 //bench lower scoring goalie
-
 $bench_gk = get_min($gk);
-echo $bench_gk['second_name'];
-  
-/*  
-if ($gk[0]['total_points'] > $gk[1]['total_points'] ){
-# echo $gk[0]['second_name'];
- $bench[] = $gk[1];
- $pitch[] = $gk[0];
-}
-else
-{
-#  echo $gk[1]['second_name'];
-$bench[] = $gk[0];
- $pitch[] = $gk[1];
+$bench[] = $bench_gk;
+//remove bench goalie from gk array
+$key = array_search($bench_gk, $gk);
+unset($gk[$key]);
+
+//bench three outfield players
+for($i=1;$i<=3;$i++){
+$sub = get_min($outfield);
+$bench[] = $sub;  
+$key = array_search($sub, $outfield);
+unset($outfield[$key]);
+}//end for
+
+//add goalie to 'pitch' team
+foreach ($gk as $g){
+  $pitch[] = $g;
+} //end foreach
+
+//add all non-benched outfielders to pitch team
+foreach ($outfield as $out){
+  $pitch[] = $out;
 }
 
+//here we go - try to output pitch team
 foreach ($pitch as $pit){
 echo "<p>" . $pit['second_name']. ", " .$pit['type_name'] . "</p>";
-}*/
+}
   
 } //end autosort
 
