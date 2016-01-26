@@ -1,5 +1,5 @@
 <?php
-
+echo "<!-- teams loaded -->";
 $dan = array(
 "manager" => "Dan";
 "name"=>"Johnny-come-lately Ziggy Stardust/Hans Gruber Memorial XV",
