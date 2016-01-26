@@ -61,7 +61,7 @@ else
   $pitch[] = $gk[1];
 }
 
-foreach $pitch as $pit{
+foreach ($pitch as $pit){
   echo "<p>$pit</p>";
 }
   
