@@ -1,5 +1,7 @@
 <?php
+
 echo "<!-- teams loaded -->";
+
 $dan = array(
 "manager" => "Dan";
 "name"=>"Johnny-come-lately Ziggy Stardust/Hans Gruber Memorial XV",
@@ -20,6 +22,7 @@ $dan = array(
 15	=>	250,	
 "score" => 0
 );
+
 $holly = array(
 "manager" => "Holly";
 "name"=>"The Bengal Penguins",
@@ -40,6 +43,7 @@ $holly = array(
 15	=>	376,
 "score" => 0
 );
+
 $pete = array(
 "manager" => "Pete";
 "name"=>"Dr. Aftlove or: How I Learned to Stop Worrying and Love Saido Berahino as a Second Round Pick sponsored by Torque, it’s what moves boulders, Memorial XV",
@@ -81,7 +85,6 @@ $christ = array(
 15	=>	293,
 "score" => 0
 );
-
 
 $sam = array(
 "manager" => "Sam";
