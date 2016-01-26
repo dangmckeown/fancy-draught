@@ -12,7 +12,6 @@ function get_min($array){
   } //end foreach
 } //end get_min()
   
-}
 
 function add_up($team){
   echo "<h3>". $team['name'] ."</h3>";
