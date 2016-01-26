@@ -2,6 +2,18 @@
 //=========
 //== RECREATE INDEX FILE, TRY TO AUTOSORT TEAMS
 //=========
+
+function get_min($array){
+  $min=array('total_score' => 20000);
+  foreach ($array as $arr){
+    if ($arr['total_score'] < $min['total_score']){
+      $min = $arr;
+    }//end if
+  } //end foreach
+} //end get_min()
+  
+}
+
 function add_up($team){
   echo "<h3>". $team['name'] ."</h3>";
   echo "<p>";
@@ -20,6 +32,7 @@ function add_up($team){
   } //end for
   echo "</p><p><b>" . $team['score'] . " points</b></p>";
 } //end function
+
 function auto_sort($team){
   $bench = array();
   $pitch = array();
@@ -50,7 +63,11 @@ function auto_sort($team){
 }//end for
 
 //bench lower scoring goalie
+
+$bench_gk = get_min($gk);
+echo $bench_gk['last_name'];
   
+/*  
 if ($gk[0]['total_points'] > $gk[1]['total_points'] ){
 # echo $gk[0]['second_name'];
  $bench[] = $gk[1];
@@ -65,7 +82,7 @@ $bench[] = $gk[0];
 
 foreach ($pitch as $pit){
 echo "<p>" . $pit['second_name']. ", " .$pit['type_name'] . "</p>";
-}
+}*/
   
 } //end autosort
 
