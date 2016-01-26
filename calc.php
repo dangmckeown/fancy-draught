@@ -4,11 +4,13 @@
 //=========
 
 function get_min($array){
-  $min=array('total_score' => 20000);
+  $min=array('second_name' => "Default value",'total_score' => 20000);
   foreach ($array as $arr){
+    echo "Testing " . $arr['second_name'] . " with score " . $arr['total_score'];
     if ($arr['total_score'] < $min['total_score']){
       $min = $arr;
     }//end if
+    echo "Min is now " . $min['second_name'] . " with score " . $min['total_score'];
   } //end foreach
   return $min;
 } //end get_min()
