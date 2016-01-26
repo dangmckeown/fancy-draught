@@ -6,16 +6,17 @@
 function get_min($array){
   $min=array('second_name' => "Default value",'total_points' => 20000);
   foreach ($array as $arr){
-    echo "Testing " . $arr['second_name'] . " with score " . $arr['total_points'];
+    #echo "Testing " . $arr['second_name'] . " with score " . $arr['total_points'];
     if ($arr['total_points'] < $min['total_points']){
       $min = $arr;
     }//end if
-    echo "Min is now " . $min['second_name'] . " with score " . $min['total_points'];
+    #echo "Min is now " . $min['second_name'] . " with score " . $min['total_points'];
   } //end foreach
   return $min;
 } //end get_min()
   
 
+/*
 function add_up($team){
   echo "<h3>". $team['name'] ."</h3>";
   echo "<p>";
@@ -34,6 +35,7 @@ function add_up($team){
   } //end for
   echo "</p><p><b>" . $team['score'] . " points</b></p>";
 } //end function
+*/
 
 function auto_sort($team){
   
@@ -221,10 +223,10 @@ $sam = array(
 );
 
 #add_up($dan);
-#add_up($holly);
-#add_up($pete);
-#add_up($christ);
-#add_up($sam);
+auto_sort($holly);
+auto_sort($pete);
+auto_sort($christ);
+auto_sort($sam);
 auto_sort($dan);
 
 ?>
