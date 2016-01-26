@@ -65,7 +65,7 @@ function auto_sort($team){
 //bench lower scoring goalie
 
 $bench_gk = get_min($gk);
-echo $bench_gk['last_name'];
+echo $bench_gk['second_name'];
   
 /*  
 if ($gk[0]['total_points'] > $gk[1]['total_points'] ){
