@@ -1,4 +1,5 @@
 <?php
+echo "<!-- functions loaded! -->";
 
 function get_min($array){
   $min=array('second_name' => "Default value",'total_points' => 20000);
