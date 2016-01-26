@@ -21,6 +21,8 @@ function add_up($team){
   echo "</p><p><b>" . $team['score'] . " points</b></p>";
 } //end function
 function auto_sort($team){
+  $bench = array();
+  $pitch = array();
   $gk = array();
   $df = array();
   $md = array();
@@ -46,13 +48,22 @@ function auto_sort($team){
   
 } //end switch
 }//end for
-  //test
-  echo $gk[1]['second_name'];
-    echo $gk[1]['total_score'];
-    echo "<br />";
-  echo $fw[1]['second_name'];
-    echo $fw[1]['total_score'];
+
+//bench lower scoring goalie
   
+if ($gk[0]['total_points'] > $gk[1]['total_points'] ){
+  $bench[] = $gk[1];
+  $pitch[] = $gk[0];
+}
+else
+{
+  $bench[] = $gk[0];
+  $pitch[] = $gk[1];
+}
+
+foreach $pitch as $pit{
+  echo "<p>$pit</p>";
+}
   
 } //end autosort
 
