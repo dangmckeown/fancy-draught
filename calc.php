@@ -52,20 +52,20 @@ function auto_sort($team){
 //bench lower scoring goalie
   
 if ($gk[0]['total_points'] > $gk[1]['total_points'] ){
-echo $gk[0]['second_name'];
+# echo $gk[0]['second_name'];
  $bench[] = $gk[1];
  $pitch[] = $gk[0];
 }
 else
 {
-  echo $gk[1]['second_name'];
+#  echo $gk[1]['second_name'];
 $bench[] = $gk[0];
  $pitch[] = $gk[1];
 }
 
-#foreach ($pitch as $pit){
-#  echo "<p>" . $pit['second_name']. ", " .$pit['type_name'] . "</p>";
-#}
+foreach ($pitch as $pit){
+echo "<p>" . $pit['second_name']. ", " .$pit['type_name'] . "</p>";
+}
   
 } //end autosort
 
