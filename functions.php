@@ -1,6 +1,6 @@
 <?php
 echo "<!-- functions loaded! -->";
-
+/*
 function get_min($array){
   $min=array('second_name' => "Default value",'total_points' => 20000);
   foreach ($array as $arr){
@@ -94,6 +94,6 @@ echo "<p>On bench: $bench_total points</p>";
   echo "</td></tr></table>";
 } //end autosort
 
-
+*/
 
 ?>
