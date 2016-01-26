@@ -10,6 +10,7 @@ function get_min($array){
       $min = $arr;
     }//end if
   } //end foreach
+  return $min;
 } //end get_min()
   
 
