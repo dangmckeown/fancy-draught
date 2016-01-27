@@ -13,8 +13,17 @@ for($i=1;$i<=659;$i++){
     $json = json_decode($content, true);
 	$key = $json['team_name'];
 	$teams[$key][] = $json;
+} //end for $i
+
+foreach ($teams as $tm){
+ foreach ($key as $k){
+ echo $k[second_name];
+ }
+ echo $key;
 }
 
+
+/*
 
 $prem_table = array(
 'Leicester'=>	47,
@@ -50,6 +59,6 @@ $fantasy_total += $tm['total_points'];
 echo key($prem) . " " . $fantasy_total / $prem . "<br />;
 
 }
-
+*/
 
 ?>
