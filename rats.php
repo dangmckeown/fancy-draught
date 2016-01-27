@@ -11,17 +11,9 @@ for($i=1;$i<=659;$i++){
  $url = "http://fantasy.premierleague.com/web/api/elements/" . $i . "/";
     $content = file_get_contents($url);
     $json = json_decode($content, true);
-	$key = $json['team_name'];
-	$teams[$key][] = $json;
+    echo $json['second_name'] . " " . $json['team_name'] . " " . $json['total_points'];
+
 } //end for $i
-
-foreach ($teams as $tm){
- foreach ($key as $k){
- echo $k[second_name];
- }
- echo $key;
-}
-
 
 /*
 
@@ -48,17 +40,7 @@ $prem_table = array(
 'Aston Villa'=>	13
 );
 
-foreach($prem_table as $prem){
-//get key and reference against fantasy score totals
-$fantasy_total = 0;
 
-foreach ($teams[key($prem)] as $tm){
-$fantasy_total += $tm['total_points'];
-}
-
-echo key($prem) . " " . $fantasy_total / $prem . "<br />;
-
-}
 */
 
 ?>
