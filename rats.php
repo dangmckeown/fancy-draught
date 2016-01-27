@@ -6,79 +6,105 @@
 
 $teams = array();
 
+$arsenal = array('name' => 'Arsenal', 'premier_league_points'=>0, 'fantasy_points'=>0);
+$aston_villa = array('name' => 'Aston Villa', 'premier_league_points'=>0, 'fantasy_points'=>0);
+$bournemouth = array('name' => 'Bournemouth', 'premier_league_points'=>0, 'fantasy_points'=>0);
+$chelsea = array('name' => 'Chelsea', 'premier_league_points'=>0, 'fantasy_points'=>0);
+$crystal_palace = array('name' => 'Crystal Palace', 'premier_league_points'=>0, 'fantasy_points'=>0);
+$everton = array('name' => 'Everton', 'premier_league_points'=>0, 'fantasy_points'=>0);
+$leicester = array('name' => 'Leicester', 'premier_league_points'=>0, 'fantasy_points'=>0);
+$liverpool = array('name' => 'Liverpool', 'premier_league_points'=>0, 'fantasy_points'=>0);
+$man_city = array('name' => 'Man City', 'premier_league_points'=>0, 'fantasy_points'=>0);
+$man_utd = array('name' => 'Man Utd', 'premier_league_points'=>0, 'fantasy_points'=>0);
+$newcastle = array('name' => 'Newcastle', 'premier_league_points'=>0, 'fantasy_points'=>0);
+$norwich = array('name' => 'Norwich', 'premier_league_points'=>0, 'fantasy_points'=>0);
+$southampton = array('name' => 'Southampton', 'premier_league_points'=>0, 'fantasy_points'=>0);
+$spurs = array('name' => 'Spurs', 'premier_league_points'=>0, 'fantasy_points'=>0);
+$stoke = array('name' => 'Stoke', 'premier_league_points'=>0, 'fantasy_points'=>0);
+$sunderland = array('name' => 'Sunderland', 'premier_league_points'=>0, 'fantasy_points'=>0);
+$swansea = array('name' => 'Swansea', 'premier_league_points'=>0, 'fantasy_points'=>0);
+$watford = array('name' => 'Watford', 'premier_league_points'=>0, 'fantasy_points'=>0);
+$west_brom = array('name' => 'West Brom', 'premier_league_points'=>0, 'fantasy_points'=>0);
+$west_ham = array('name' => 'West Ham', 'premier_league_points'=>0, 'fantasy_points'=>0);
+$unaccounted = array('name' => 'Unaccounted for', 'premier_league_points'=>0, 'fantasy_points'=>0);
+
 for($i=1;$i<=659;$i++){
 
  $url = "http://fantasy.premierleague.com/web/api/elements/" . $i . "/";
     $content = file_get_contents($url);
     $json = json_decode($content, true);
     
-   switch ($json['team_name']){
+
+ switch ($json['team_name']){
     case "Arsenal":
-     $arsenal['fantasy points'] += $json['total_points'];
+     $arsenal['fantasy_points'] += $json['total_points'];
      break;
      case "Aston Villa":
-     $aston_villa['fantasy points'] += $json['total_points'];
+     $aston_villa['fantasy_points'] += $json['total_points'];
      break;
      case "Bournemouth":
-     $bournemouth['fantasy points'] += $json['total_points'];
+     $bournemouth['fantasy_points'] += $json['total_points'];
      break;
     case "Chelsea":
-     $chelsea['fantasy points'] += $json['total_points'];
+     $chelsea['fantasy_points'] += $json['total_points'];
      break;
      case "Crystal Palace":
-     $crystal_palace['fantasy points'] += $json['total_points'];
+     $crystal_palace['fantasy_points'] += $json['total_points'];
      break;
      case "Everton":
-     $everton['fantasy points'] += $json['total_points'];
+     $everton['fantasy_points'] += $json['total_points'];
      break;
      case "Leicester":
-     $leicester['fantasy points'] += $json['total_points'];
+     $leicester['fantasy_points'] += $json['total_points'];
      break;
     case "Liverpool":
-     $liverpool['fantasy points'] += $json['total_points'];
+     $liverpool['fantasy_points'] += $json['total_points'];
      break;
     case "Man City":
-     $man_city['fantasy points'] += $json['total_points'];
+     $man_city['fantasy_points'] += $json['total_points'];
      break;
      case "Man Utd":
-     $man_utd['fantasy points'] += $json['total_points'];
+     $man_utd['fantasy_points'] += $json['total_points'];
      break;
      case "Newcastle":
-     $newcastle['fantasy points'] += $json['total_points'];
+     $newcastle['fantasy_points'] += $json['total_points'];
      break;
     case "Norwich":
-     $norwich['fantasy points'] += $json['total_points'];
+     $norwich['fantasy_points'] += $json['total_points'];
      break;
      case "Southampton":
-     $southampton['fantasy points'] += $json['total_points'];
+     $southampton['fantasy_points'] += $json['total_points'];
      break;
      case "Spurs":
-     $spurs['fantasy points'] += $json['total_points'];
+     $spurs['fantasy_points'] += $json['total_points'];
      break;
      case "Stoke":
-     $stoke['fantasy points'] += $json['total_points'];
+     $stoke['fantasy_points'] += $json['total_points'];
      break;
     case "Sunderland":
-     $sunderland['fantasy points'] += $json['total_points'];
+     $sunderland['fantasy_points'] += $json['total_points'];
      break;
          case "Swansea":
-          $swansea['fantasy points'] += $json['total_points'];
+          $swansea['fantasy_points'] += $json['total_points'];
      break;
      case "Watford":
-     $watford['fantasy points'] += $json['total_points'];
+     $watford['fantasy_points'] += $json['total_points'];
      break;
      case "West Brom":
-     $west_brom['fantasy points'] += $json['total_points'];
+     $west_brom['fantasy_points'] += $json['total_points'];
      break;
     case "West Ham":
-     $west_ham['fantasy points'] += $json['total_points'];
+     $west_ham['fantasy_points'] += $json['total_points'];
      break;
      default:
      $unaccounted += $json['total_points'];
    
    } //end switch
 
+
 } //end for $i
+
+echo $man_city['Name'] . "=" . $man_city['Fantasy Points'];
 
 /*
 
