@@ -82,10 +82,10 @@ for($i=1;$i<=659;$i++){
      $stoke['fantasy_points'] += $json['total_points'];
      break;
     case "Sunderland":
-     $sunderland['fantasy_points'] += $json['total_points'];
-     break;
-         case "Swansea":
-          $swansea['fantasy_points'] += $json['total_points'];
+    $sunderland['fantasy_points'] += $json['total_points'];
+    break;
+    case "Swansea":
+    $swansea['fantasy_points'] += $json['total_points'];
      break;
      case "Watford":
      $watford['fantasy_points'] += $json['total_points'];
@@ -104,7 +104,7 @@ for($i=1;$i<=659;$i++){
 
 } //end for $i
 
-echo $man_city['Name'] . "=" . $man_city['Fantasy Points'];
+echo $man_city['Name'] . " = " . $man_city['Fantasy Points'];
 
 /*
 
