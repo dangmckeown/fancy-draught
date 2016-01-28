@@ -5,26 +5,26 @@
 //set and populate teams array
 $teams = array(
 
-'Arsenal' => array('name' => 'Arsenal', 'premier_league_points'=>0, 'fantasy_points'=>0),
-'Aston Villa' => array('name' => 'Aston Villa', 'premier_league_points'=>0, 'fantasy_points'=>0),
-'Bournemouth' => array('name' => 'Bournemouth', 'premier_league_points'=>0, 'fantasy_points'=>0),
-'Chelsea' => array('name' => 'Chelsea', 'premier_league_points'=>0, 'fantasy_points'=>0),
-'Crystal Palace' => array('name' => 'Crystal Palace', 'premier_league_points'=>0, 'fantasy_points'=>0),
-'Everton' => array('name' => 'Everton', 'premier_league_points'=>0, 'fantasy_points'=>0),
-'Leicester' => array('name' => 'Leicester', 'premier_league_points'=>0, 'fantasy_points'=>0),
-'Liverpool' => array('name' => 'Liverpool', 'premier_league_points'=>0, 'fantasy_points'=>0),
-'Man City' => array('name' => 'Man City', 'premier_league_points'=>0, 'fantasy_points'=>0),
-'Man Utd' => array('name' => 'Man Utd', 'premier_league_points'=>0, 'fantasy_points'=>0),
-'Newcastle' => array('name' => 'Newcastle', 'premier_league_points'=>0, 'fantasy_points'=>0),
-'Norwich' => array('name' => 'Norwich', 'premier_league_points'=>0, 'fantasy_points'=>0),
-'Southampton' => array('name' => 'Southampton', 'premier_league_points'=>0, 'fantasy_points'=>0),
-'Spurs' => array('name' => 'Spurs', 'premier_league_points'=>0, 'fantasy_points'=>0),
-'Stoke' => array('name' => 'Stoke', 'premier_league_points'=>0, 'fantasy_points'=>0),
-'Sunderland' => array('name' => 'Sunderland', 'premier_league_points'=>0, 'fantasy_points'=>0),
-'Swansea' => array('name' => 'Swansea', 'premier_league_points'=>0, 'fantasy_points'=>0),
-'Watford' => array('name' => 'Watford', 'premier_league_points'=>0, 'fantasy_points'=>0),
-'West Brom' => array('name' => 'West Brom', 'premier_league_points'=>0, 'fantasy_points'=>0),
-'West Ham' => array('name' => 'West Ham', 'premier_league_points'=>0, 'fantasy_points'=>0),
+'Arsenal' => array('name' => 'Arsenal', 'premier_league_points'=>0, 'fantasy_points'=>1094),
+'Aston Villa' => array('name' => 'Aston Villa', 'premier_league_points'=>0, 'fantasy_points'=>455),
+'Bournemouth' => array('name' => 'Bournemouth', 'premier_league_points'=>0, 'fantasy_points'=>825),
+'Chelsea' => array('name' => 'Chelsea', 'premier_league_points'=>0, 'fantasy_points'=>852),
+'Crystal Palace' => array('name' => 'Crystal Palace', 'premier_league_points'=>0, 'fantasy_points'=>736),
+'Everton' => array('name' => 'Everton', 'premier_league_points'=>0, 'fantasy_points'=>905),
+'Leicester' => array('name' => 'Leicester', 'premier_league_points'=>0, 'fantasy_points'=>985),
+'Liverpool' => array('name' => 'Liverpool', 'premier_league_points'=>0, 'fantasy_points'=>914),
+'Man City' => array('name' => 'Man City', 'premier_league_points'=>0, 'fantasy_points'=>974),
+'Man Utd' => array('name' => 'Man Utd', 'premier_league_points'=>0, 'fantasy_points'=>760),
+'Newcastle' => array('name' => 'Newcastle', 'premier_league_points'=>0, 'fantasy_points'=>567),
+'Norwich' => array('name' => 'Norwich', 'premier_league_points'=>0, 'fantasy_points'=>669),
+'Southampton' => array('name' => 'Southampton', 'premier_league_points'=>0, 'fantasy_points'=>862),
+'Spurs' => array('name' => 'Spurs', 'premier_league_points'=>0, 'fantasy_points'=>1049),
+'Stoke' => array('name' => 'Stoke', 'premier_league_points'=>0, 'fantasy_points'=>747),
+'Sunderland' => array('name' => 'Sunderland', 'premier_league_points'=>0, 'fantasy_points'=>532),
+'Swansea' => array('name' => 'Swansea', 'premier_league_points'=>0, 'fantasy_points'=>802),
+'Watford' => array('name' => 'Watford', 'premier_league_points'=>0, 'fantasy_points'=>786),
+'West Brom' => array('name' => 'West Brom', 'premier_league_points'=>0, 'fantasy_points'=>307),
+'West Ham' => array('name' => 'West Ham', 'premier_league_points'=>0, 'fantasy_points'=>60),
 'Unaccounted for' => array('name' => 'Unaccounted for', 'premier_league_points'=>0, 'fantasy_points'=>0)
 
 );
@@ -35,7 +35,7 @@ $players=array();
 
 //get player info (659 available as of 28/01/2016)
 
-for($i=1;$i<=450;$i++){
+for($i=451;$i<=659;$i++){
 //raise to 450 and say a prayer
 $url = "http://fantasy.premierleague.com/web/api/elements/" . $i . "/";
 $result = file_get_contents($url);
