@@ -35,8 +35,8 @@ $players=array();
 
 //get player info (659 available as of 28/01/2016)
 
-for($i=1;$i<=25;$i++){
-//limit to first 25 (prob Arsenal) at first
+for($i=1;$i<=125;$i++){
+//limit to first 125 (up from 25)
 $url = "http://fantasy.premierleague.com/web/api/elements/" . $i . "/";
 $result = file_get_contents($url);
 $json = json_decode($result, true);
