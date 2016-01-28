@@ -6,16 +6,26 @@
 
 $teams = array(
 
-'Arsenal' => array('name' => 'Arsenal', 'premier_league_points'=>0, 'fantasy_points'=>0);
-'Aston Villa' => array('name' => 'Aston Villa', 'premier_league_points'=>0, 'fantasy_points'=>0);'Bournemouth' => array('name' => 'Bournemouth', 'premier_league_points'=>0, 'fantasy_points'=>0);'Chelsea' => array('name' => 'Chelsea', 'premier_league_points'=>0, 'fantasy_points'=>0);'Crystal Palace' => array('name' => 'Crystal Palace', 'premier_league_points'=>0, 'fantasy_points'=>0);'Everton' => array('name' => 'Everton', 'premier_league_points'=>0, 'fantasy_points'=>0);'Leicester' => array('name' => 'Leicester', 'premier_league_points'=>0, 'fantasy_points'=>0);
-'Liverpool' => array('name' => 'Liverpool', 'premier_league_points'=>0, 'fantasy_points'=>0);'Man City' => array('name' => 'Man City', 'premier_league_points'=>0, 'fantasy_points'=>0);
-'Man Utd' => array('name' => 'Man Utd', 'premier_league_points'=>0, 'fantasy_points'=>0);
-'Newcastle' => array('name' => 'Newcastle', 'premier_league_points'=>0, 'fantasy_points'=>0);'Norwich' => array('name' => 'Norwich', 'premier_league_points'=>0, 'fantasy_points'=>0);'Southampton' => array('name' => 'Southampton', 'premier_league_points'=>0, 'fantasy_points'=>0);
-'Spurs' => array('name' => 'Spurs', 'premier_league_points'=>0, 'fantasy_points'=>0);
-'Stoke' => array('name' => 'Stoke', 'premier_league_points'=>0, 'fantasy_points'=>0);'Sunderland' => array('name' => 'Sunderland', 'premier_league_points'=>0, 'fantasy_points'=>0);'Swansea' => array('name' => 'Swansea', 'premier_league_points'=>0, 'fantasy_points'=>0);
-'Watford' => array('name' => 'Watford', 'premier_league_points'=>0, 'fantasy_points'=>0);
-'West Brom' => array('name' => 'West Brom', 'premier_league_points'=>0, 'fantasy_points'=>0);
-'West Ham' => array('name' => 'West Ham', 'premier_league_points'=>0, 'fantasy_points'=>0);
+'Arsenal' => array('name' => 'Arsenal', 'premier_league_points'=>0, 'fantasy_points'=>0),
+'Aston Villa' => array('name' => 'Aston Villa', 'premier_league_points'=>0, 'fantasy_points'=>0),
+'Bournemouth' => array('name' => 'Bournemouth', 'premier_league_points'=>0, 'fantasy_points'=>0),
+'Chelsea' => array('name' => 'Chelsea', 'premier_league_points'=>0, 'fantasy_points'=>0),
+'Crystal Palace' => array('name' => 'Crystal Palace', 'premier_league_points'=>0, 'fantasy_points'=>0),
+'Everton' => array('name' => 'Everton', 'premier_league_points'=>0, 'fantasy_points'=>0),
+'Leicester' => array('name' => 'Leicester', 'premier_league_points'=>0, 'fantasy_points'=>0),
+'Liverpool' => array('name' => 'Liverpool', 'premier_league_points'=>0, 'fantasy_points'=>0),
+'Man City' => array('name' => 'Man City', 'premier_league_points'=>0, 'fantasy_points'=>0),
+'Man Utd' => array('name' => 'Man Utd', 'premier_league_points'=>0, 'fantasy_points'=>0),
+'Newcastle' => array('name' => 'Newcastle', 'premier_league_points'=>0, 'fantasy_points'=>0),
+'Norwich' => array('name' => 'Norwich', 'premier_league_points'=>0, 'fantasy_points'=>0),
+'Southampton' => array('name' => 'Southampton', 'premier_league_points'=>0, 'fantasy_points'=>0),
+'Spurs' => array('name' => 'Spurs', 'premier_league_points'=>0, 'fantasy_points'=>0),
+'Stoke' => array('name' => 'Stoke', 'premier_league_points'=>0, 'fantasy_points'=>0),
+'Sunderland' => array('name' => 'Sunderland', 'premier_league_points'=>0, 'fantasy_points'=>0),
+'Swansea' => array('name' => 'Swansea', 'premier_league_points'=>0, 'fantasy_points'=>0),
+'Watford' => array('name' => 'Watford', 'premier_league_points'=>0, 'fantasy_points'=>0),
+'West Brom' => array('name' => 'West Brom', 'premier_league_points'=>0, 'fantasy_points'=>0),
+'West Ham' => array('name' => 'West Ham', 'premier_league_points'=>0, 'fantasy_points'=>0),
 'Unaccounted for' => array('name' => 'Unaccounted for', 'premier_league_points'=>0, 'fantasy_points'=>0)
 
 );
