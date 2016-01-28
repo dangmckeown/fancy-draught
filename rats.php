@@ -35,8 +35,8 @@ $players=array();
 
 //get player info (659 available as of 28/01/2016)
 
-for($i=1;$i<=125;$i++){
-//limit to first 125 (up from 25)
+for($i=1;$i<=659;$i++){
+//raise to 659 and say a prayer
 $url = "http://fantasy.premierleague.com/web/api/elements/" . $i . "/";
 $result = file_get_contents($url);
 $json = json_decode($result, true);
@@ -121,7 +121,7 @@ foreach ($players as $player){
 
 
 foreach ($teams as $team){
- echo $team['name'] . " " . $team['fantasy_points'];
+ echo $team['name'] . " " . $team['fantasy_points'] . "<br />";
 }
 
 #echo $man_city['Name'] . " = " . $man_city['Fantasy Points'];
