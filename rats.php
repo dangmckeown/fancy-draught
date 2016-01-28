@@ -4,29 +4,21 @@
 
 //set and populate teams array
 
-$teams = array();
+$teams = array(
 
-$arsenal = array('name' => 'Arsenal', 'premier_league_points'=>0, 'fantasy_points'=>0);
-$aston_villa = array('name' => 'Aston Villa', 'premier_league_points'=>0, 'fantasy_points'=>0);
-$bournemouth = array('name' => 'Bournemouth', 'premier_league_points'=>0, 'fantasy_points'=>0);
-$chelsea = array('name' => 'Chelsea', 'premier_league_points'=>0, 'fantasy_points'=>0);
-$crystal_palace = array('name' => 'Crystal Palace', 'premier_league_points'=>0, 'fantasy_points'=>0);
-$everton = array('name' => 'Everton', 'premier_league_points'=>0, 'fantasy_points'=>0);
-$leicester = array('name' => 'Leicester', 'premier_league_points'=>0, 'fantasy_points'=>0);
-$liverpool = array('name' => 'Liverpool', 'premier_league_points'=>0, 'fantasy_points'=>0);
-$man_city = array('name' => 'Man City', 'premier_league_points'=>0, 'fantasy_points'=>0);
-$man_utd = array('name' => 'Man Utd', 'premier_league_points'=>0, 'fantasy_points'=>0);
-$newcastle = array('name' => 'Newcastle', 'premier_league_points'=>0, 'fantasy_points'=>0);
-$norwich = array('name' => 'Norwich', 'premier_league_points'=>0, 'fantasy_points'=>0);
-$southampton = array('name' => 'Southampton', 'premier_league_points'=>0, 'fantasy_points'=>0);
-$spurs = array('name' => 'Spurs', 'premier_league_points'=>0, 'fantasy_points'=>0);
-$stoke = array('name' => 'Stoke', 'premier_league_points'=>0, 'fantasy_points'=>0);
-$sunderland = array('name' => 'Sunderland', 'premier_league_points'=>0, 'fantasy_points'=>0);
-$swansea = array('name' => 'Swansea', 'premier_league_points'=>0, 'fantasy_points'=>0);
-$watford = array('name' => 'Watford', 'premier_league_points'=>0, 'fantasy_points'=>0);
-$west_brom = array('name' => 'West Brom', 'premier_league_points'=>0, 'fantasy_points'=>0);
-$west_ham = array('name' => 'West Ham', 'premier_league_points'=>0, 'fantasy_points'=>0);
-$unaccounted = array('name' => 'Unaccounted for', 'premier_league_points'=>0, 'fantasy_points'=>0);
+'Arsenal' => array('name' => 'Arsenal', 'premier_league_points'=>0, 'fantasy_points'=>0);
+'Aston Villa' => array('name' => 'Aston Villa', 'premier_league_points'=>0, 'fantasy_points'=>0);'Bournemouth' => array('name' => 'Bournemouth', 'premier_league_points'=>0, 'fantasy_points'=>0);'Chelsea' => array('name' => 'Chelsea', 'premier_league_points'=>0, 'fantasy_points'=>0);'Crystal Palace' => array('name' => 'Crystal Palace', 'premier_league_points'=>0, 'fantasy_points'=>0);'Everton' => array('name' => 'Everton', 'premier_league_points'=>0, 'fantasy_points'=>0);'Leicester' => array('name' => 'Leicester', 'premier_league_points'=>0, 'fantasy_points'=>0);
+'Liverpool' => array('name' => 'Liverpool', 'premier_league_points'=>0, 'fantasy_points'=>0);'Man City' => array('name' => 'Man City', 'premier_league_points'=>0, 'fantasy_points'=>0);
+'Man Utd' => array('name' => 'Man Utd', 'premier_league_points'=>0, 'fantasy_points'=>0);
+'Newcastle' => array('name' => 'Newcastle', 'premier_league_points'=>0, 'fantasy_points'=>0);'Norwich' => array('name' => 'Norwich', 'premier_league_points'=>0, 'fantasy_points'=>0);'Southampton' => array('name' => 'Southampton', 'premier_league_points'=>0, 'fantasy_points'=>0);
+'Spurs' => array('name' => 'Spurs', 'premier_league_points'=>0, 'fantasy_points'=>0);
+'Stoke' => array('name' => 'Stoke', 'premier_league_points'=>0, 'fantasy_points'=>0);'Sunderland' => array('name' => 'Sunderland', 'premier_league_points'=>0, 'fantasy_points'=>0);'Swansea' => array('name' => 'Swansea', 'premier_league_points'=>0, 'fantasy_points'=>0);
+'Watford' => array('name' => 'Watford', 'premier_league_points'=>0, 'fantasy_points'=>0);
+'West Brom' => array('name' => 'West Brom', 'premier_league_points'=>0, 'fantasy_points'=>0);
+'West Ham' => array('name' => 'West Ham', 'premier_league_points'=>0, 'fantasy_points'=>0);
+'Unaccounted for' => array('name' => 'Unaccounted for', 'premier_league_points'=>0, 'fantasy_points'=>0)
+
+);
 
 for($i=1;$i<=659;$i++){
 
@@ -34,8 +26,10 @@ for($i=1;$i<=659;$i++){
 $result = file_get_contents($url);
 // Will dump a beauty json :3
 var_dump(json_decode($result, true));
-    
 
+$teams[$result['team_name']]['fantasy_points'] += $result['total_points'];
+
+/*
  switch ($json['team_name']){
     case "Arsenal":
      $arsenal['fantasy_points'] += $json['total_points'];
@@ -101,11 +95,15 @@ var_dump(json_decode($result, true));
      $unaccounted += $json['total_points'];
    
    } //end switch
-
+*/
 
 } //end for $i
 
-echo $man_city['Name'] . " = " . $man_city['Fantasy Points'];
+foreach ($teams as $team){
+ echo $team['name'] . " " . $team['fantasy_points'];
+}
+
+#echo $man_city['Name'] . " = " . $man_city['Fantasy Points'];
 
 /*
 
