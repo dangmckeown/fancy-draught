@@ -31,8 +31,9 @@ $unaccounted = array('name' => 'Unaccounted for', 'premier_league_points'=>0, 'f
 for($i=1;$i<=659;$i++){
 
  $url = "http://fantasy.premierleague.com/web/api/elements/" . $i . "/";
-    $content = file_get_contents($url);
-    $json = json_decode($content, true);
+$result = file_get_contents($url);
+// Will dump a beauty json :3
+var_dump(json_decode($result, true));
     
 
  switch ($json['team_name']){
