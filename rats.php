@@ -35,9 +35,9 @@ for($i=1;$i<=659;$i++){
  $url = "http://fantasy.premierleague.com/web/api/elements/" . $i . "/";
 $result = file_get_contents($url);
 // Will dump a beauty json :3
-var_dump(json_decode($result, true));
-
-$teams[$result['team_name']]['fantasy_points'] += $result['total_points'];
+$json = json_decode($result, true);
+$key = $json['team_name']
+$teams[$key]['fantasy_points'] += $json['total_points'];
 
 /*
  switch ($json['team_name']){
