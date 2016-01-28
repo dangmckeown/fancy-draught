@@ -3,7 +3,6 @@
 // New file - try to monitor if there's any correlation between Fantasy Teams and reality
 
 //set and populate teams array
-
 $teams = array(
 
 'Arsenal' => array('name' => 'Arsenal', 'premier_league_points'=>0, 'fantasy_points'=>0),
@@ -30,13 +29,26 @@ $teams = array(
 
 );
 
-for($i=1;$i<=659;$i++){
 
- $url = "http://fantasy.premierleague.com/web/api/elements/" . $i . "/";
+//set players array to be populated from API
+$players=array();
+
+//get player info (659 available as of 28/01/2016)
+
+for($i=1;$i<=25;$i++){
+//limit to first 25 (prob Arsenal) at first
+$url = "http://fantasy.premierleague.com/web/api/elements/" . $i . "/";
 $result = file_get_contents($url);
 $json = json_decode($result, true);
-$key = $json['team_name'];
-$teams[$key]['fantasy_points'] += $json['total_points'];
+$players[] = $json;
+} //end for $i
+
+//assign players' fantasy points to team
+foreach ($players as $player){
+ $key = $player['team_name'];
+ $teams[$key]['fantasy_points'] += $player['total_points'] ;
+}
+
 
 /*
  switch ($json['team_name']){
@@ -106,7 +118,7 @@ $teams[$key]['fantasy_points'] += $json['total_points'];
    } //end switch
 */
 
-} //end for $i
+
 
 foreach ($teams as $team){
  echo $team['name'] . " " . $team['fantasy_points'];
