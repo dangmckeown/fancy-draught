@@ -35,8 +35,8 @@ $players=array();
 
 //get player info (659 available as of 28/01/2016)
 
-for($i=1;$i<=659;$i++){
-//raise to 659 and say a prayer
+for($i=1;$i<=450;$i++){
+//raise to 450 and say a prayer
 $url = "http://fantasy.premierleague.com/web/api/elements/" . $i . "/";
 $result = file_get_contents($url);
 $json = json_decode($result, true);
