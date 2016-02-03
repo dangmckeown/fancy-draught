@@ -1,3 +1,7 @@
+<?php
+
+$style = <<<_css_
+
 td  {display:inline;border: 1px black solid; width:150px;vertical-align:top;}
 
 body{font-family: arial;}
@@ -22,4 +26,6 @@ font-size:15pt; font-weight: bold;
 table{background-color: #ffffff;}
 td {width:50%;}
 
-}
+} _css_;
+
+?>
