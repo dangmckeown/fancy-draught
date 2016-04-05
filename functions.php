@@ -70,7 +70,7 @@ echo "<table><tr><td>First team</td><td>Subs</td></tr><tr><td style='text-align:
 //here we go - try to output pitch team
 $team_total = 0;
 
-//EDIT sort by player type (5/4/2016)
+/* EDIT sort by player type (5/4/2016)
 
 echo $gk[0] . "<br />";
 
@@ -82,11 +82,11 @@ for ($i = 0; $i <= 9; $i++)
   echo $outfield[$i] . " ";
 }
 
-//END edit
+/END edit */
 
 foreach ($pitch as $pit){
   $team_total += $pit['total_points'];
-#echo "<p>" . $pit['first_name'] . " " . $pit['second_name']. ", " .$pit['type_name'] . " (" . $pit['team_name'] . ") " . $pit['total_points'] . "points</p>";
+echo "<p>" . $pit['first_name'] . " " . $pit['second_name']. ", " .$pit['type_name'] . " (" . $pit['team_name'] . ") " . $pit['total_points'] . "points</p>";
 }
 
 
