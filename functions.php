@@ -66,12 +66,27 @@ foreach ($outfield as $out){
 }
 
 //set table layout
-echo "<table><tr><td>First team</td><td>Subs</td></tr><tr><td valign=top>";
+echo "<table><tr><td>First team</td><td>Subs</td></tr><tr><td style='text-align: center;' valign=top>";
 //here we go - try to output pitch team
 $team_total = 0;
+
+//EDIT sort by player type (5/4/2016)
+
+echo $gk[0] . "<br />";
+
+for ($i = 0; $i <= 9; $i++)
+{
+  if ($outfield[$i]['type_name'] != $outfield[$i - 1]['type_name']){
+    echo "<br />";
+  }
+  echo $outfield[$i] . " ";
+}
+
+//END edit
+
 foreach ($pitch as $pit){
   $team_total += $pit['total_points'];
-echo "<p>" . $pit['first_name'] . " " . $pit['second_name']. ", " .$pit['type_name'] . " (" . $pit['team_name'] . ") " . $pit['total_points'] . "points</p>";
+#echo "<p>" . $pit['first_name'] . " " . $pit['second_name']. ", " .$pit['type_name'] . " (" . $pit['team_name'] . ") " . $pit['total_points'] . "points</p>";
 }
 
 
