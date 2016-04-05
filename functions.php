@@ -71,7 +71,7 @@ echo "<table><tr><td>First team</td><td>Subs</td></tr><tr><td valign=top>";
 $team_total = 0;
 foreach ($pitch as $pit){
   $team_total += $pit['total_points'];
-echo "<p>" . $pit['second_name']. ", " .$pit['type_name'] . " " . $pit['total_points'] . "points</p>";
+echo "<p>" . $pit['first_name'] . " " . $pit['second_name']. ", " .$pit['type_name'] . " (" . $pit['team_name'] . ") " . $pit['total_points'] . "points</p>";
 }
 
 
@@ -81,7 +81,7 @@ echo "</td><td valign=top>";
 $bench_total = 0;
 foreach ($bench as $ben){
   $bench_total += $ben['total_points'];
-echo "<p>" . $ben['second_name']. ", " .$ben['type_name'] . " " . $ben['total_points'] . "points</p>";
+echo "<p>" . $ben['first_name'] . " " . $ben['second_name']. ", " . $ben['team_name'] . " " . $ben['total_points'] . "points</p>";
 }
 
 
