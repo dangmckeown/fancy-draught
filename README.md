@@ -1,5 +1,6 @@
 # fancy-draught
 Automatic-updating league table for our Fantasy League Draft, integrating data from fantasy.premierleague.com API
+(EDIT 2016-17 season: API is now down. App is running from scraped data)
 
 On the day of the Community Shield match between Arsenal and Chelsea, we gathered in the Porterhouse near covent garden, clutching handfuls of notes, ready for our inaugural Fantasy League draft.
 
@@ -15,11 +16,12 @@ The first round of the draft went as might be expected: Rooney and Aguero, top s
 
 About this app:
 
-* https://fancy-draught-2015-16.herokuapp.com/
+* https://fancy-draught.herokuapp.com/
 * Teams stored in arrays in teams.php
+* Scraper in curl.php
 * Functions stored in functions.php 
 * get_min($array) finds lowest scorer from a selection of players
-* auto_sort($team) uses get_min to bench one goalie and three outfielders, then lays out the rest of the squad with scores
+* Each function stored in separate file
 * header.php and footer.php lend html basics
 * index.php calls the whole lot together and renders
-* external CSS not working at present
+
